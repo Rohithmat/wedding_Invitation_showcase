@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <style>
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7d794;
+    color: #333;
+}
+header {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/18/138/461/sand-sea-beach-girl-wallpaper-preview.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 4em;
+    margin: 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 20px;
+}
+
+.couple-info-header {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.couple-info-header p {
+    margin: 5px 0;
+    font-size: 1.5em; /* Increase font size */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.nav-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav-buttons a {
+    background-color: #c69c6d;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background 0.3s, transform 0.3s;
+    font-weight: bold;
+}
+
+.nav-buttons a:hover {
+    background-color: #b58a5d;
+    transform: scale(1.05);
+}
+
+.invitation {
+    background-color: #ffffff;
+    padding: 40px;
+    margin: 30px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    text-align: center;
+    }
+
+.invitation h2 {
+    font-size: 2.5em;
+    margin: 10px 0;
+    color: #5d3a2e;
+    text-transform: uppercase;
+    border-bottom: 2px solid #c69c6d;
+    padding-bottom: 10px;
+}
+
+.invitation p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.couple-details {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 800px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.couple-details h3 {
+    color: #5d3a2e;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #c69c6d;
+    padding-bottom: 10px;
+}
+.couple-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.couple-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.couple-card:hover {
+    transform: scale(1.05);
+}
+
+.couple-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.couple-name {
+    font-size: 1.8em;
+    color: #5d3a2e;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #c69c6d;
+    font-weight: bold;
+}
+
+.invitation-card {
+    margin: 30px auto;
+    text-align: center;
+    width: 100%;
+}
+
+.invitation-card h2 {
+    font-size: 2.5em;
+    color: #5d3a2e;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.invitation-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.couple-memories-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 900px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.couple-memories-container h2 {
+    font-size: 2.5em;
+    color: #5d3a2e;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    object-fit: cover;
+    height: 200px;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.gallery img:nth-child(2) {
+    grid-column: span 2;
+}
+
+.gallery img:nth-child(5) {
+    grid-row: span 2;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #c69c6d;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+        /* CSS code will be provided below */
+    </style>
+</head>
+<body oncontextmenu="return false;" onselectstart="return false;">
+    <header>
+        <h1>You're Invited!</h1>
+        <div class="nav-buttons">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+        </div>
+        <div class="couple-info-header">
+            <p><strong>John & Jane</strong></p>
+            <p>Date: June 25, 2024</p>
+        </div>
+    </header>
+    
+    
+    <div class="invitation">
+        <h2>John & Jane</h2>
+        <p>Join us for a beautiful celebration of love</p>
+        <p><strong>Date:</strong> June 25, 2024</p>
+        <p><strong>Reception:</strong> The Grand Hall, 123 Celebration St, City, State</p>
+    </div>
+    
+    <div class="couple-info">
+        <div class="couple-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRod7d_rvdBvzf0-N0806SBSkbJ1PEYm921cg&s" alt="Bride">
+            <p class="couple-name"><strong>Jane Doe</strong></p>
+            <p>Qualification: <span class="highlight">Master's in Business Administration</span></p>
+            <p>Job: <span class="highlight">Marketing Manager at Creative Solutions</span></p>
+        </div>
+        <div class="couple-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeCt27WFL_fEKjFcQWHEWs7GkqEVDknrJBuA&s" alt="Groom">
+            <p class="couple-name"><strong>John Smith</strong></p>
+            <p>Qualification: <span class="highlight">Bachelor's in Computer Science</span></p>
+            <p>Job: <span class="highlight">Software Engineer at Tech Innovations</span></p>
+        </div>
+    </div>
+    
+
+    <div class="invitation-card">
+        <h2>Wedding Invitation Card</h2>
+        <img src="https://seemymarriage.com/wp-content/uploads/2020/03/Sriteja-Tamil-Card-S-V1-resized_for-shopbg-chnage.jpg" alt="Wedding Invitation Card">
+    </div>
+    
+    <div class="couple-memories-container">
+        <h2>Couple's Memories</h2>
+        <div class="gallery">
+            <img src="https://photopoets.b-cdn.net/wp-content/uploads/2021/05/Vinod-and-Dheekshana-20-768x512.jpg" alt="Memory 1" onclick="openModal(this)">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7CNWUyOcNWspdP_CktsCL9u3-QQLy-A_wAEvP1OCnkiivUmDxWCcK9E6SnHVO0nmzSJM&usqp=CAU" alt="Memory 2" onclick="openModal(this)">
+            <img src="https://images.prismic.io/devcms/dec4b3f1-77eb-4e72-81b0-8d1f0bc4f643_pre-wedding-shoot-dresses-for-couples1+%286%29.jpg?auto=compress,format" alt="Memory 3" onclick="openModal(this)">
+            <img src="https://i.pinimg.com/736x/9d/4a/96/9d4a968382063e5c1f400214034006fd.jpg" alt="Memory 4" onclick="openModal(this)">
+            <img src="https://i.pinimg.com/736x/48/46/6a/48466a377ebf51d8b480ca2008cf727c.jpg" alt="Memory 5" onclick="openModal(this)">
+            <img src="https://www.shutterstock.com/image-photo/traditional-hindu-wedding-ceremony-12th-260nw-1298364892.jpg" alt="Memory 6" onclick="openModal(this)">
+        </div>
+    </div>
+    
+    <!-- Modal Structure -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    
+    <footer>
+        <p>For more details, contact us at: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    </footer>
+
+    <script>
+        // Function to open modal
+        function openModal(img) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+    
+        // Function to close modal
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+    
+        // Alert user when trying to take screenshots
+        document.addEventListener('keydown', function (event) {
+            // Check for Print Screen key
+            if (event.key === 'PrintScreen') {
+                alert('Screenshots are not allowed on this page.');
+                event.preventDefault();
+            }
+            // Check for Ctrl + S (save)
+            if (event.ctrlKey && (event.key === 's' || event.key === 'S')) {
+                alert('Screenshots are not allowed on this page.');
+                event.preventDefault();
+            }
+        });
+    
+        // Prevent right-click
+        document.addEventListener('contextmenu', function (event) {
+            alert('Right-click is disabled on this page.');
+            event.preventDefault();
+        });
+    </script>
+    
+</body>
+</html>
